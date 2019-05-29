@@ -69,3 +69,24 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
+
+# Easy Admin Configuration
+easy_admin:
+    site_name: 'BackOffice Virgil WebSite'
+    # design du BO Virgil WebSite
+    design:
+        brand_color: 'red'
+    list:
+        max_results: 30
+    # change the following to the namespaces of your own entities
+    entities:
+        ShowEntity:
+            class: AppBundle\Entity\ShowEntity
+            label: 'Concert'
+            list:
+                title: 'Liste des concerts'
+        NewsEntity:
+            class: AppBundle\Entity\NewsEntity
+            label: 'News'
+            list:
+                title: 'Liste des news'
