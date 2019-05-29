@@ -8,7 +8,7 @@ The programming language is :
         * Framework : Symfony v3.4.*
    * HTML 5
    * CSS 3
-        * Frammework : Bootstrap v4.3.1
+        * Framework : Bootstrap v4.3.1
    * Javascript (without Jquery)
 
 
