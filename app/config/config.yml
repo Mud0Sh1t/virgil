@@ -76,6 +76,9 @@ easy_admin:
     # design du BO Virgil WebSite
     design:
         brand_color: 'red'
+        # Override template Twig
+        #templates:
+            #list: 'easyAdmin/list.html.twig'
     list:
         max_results: 30
     # change the following to the namespaces of your own entities
@@ -85,8 +88,16 @@ easy_admin:
             label: 'Concert'
             list:
                 title: 'Liste des concerts'
+            new:
+                title:  'Ajouter une date de concert'
+            edit:
+                title:  'Editer une date de concert'
         NewsEntity:
             class: AppBundle\Entity\NewsEntity
             label: 'News'
             list:
                 title: 'Liste des news'
+            new:
+                title:  'Ajouter une news'
+            edit:
+                title:  'Editer une news'
