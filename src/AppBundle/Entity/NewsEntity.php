@@ -37,6 +37,11 @@ class NewsEntity
      */
     private $description;
 
+    public function __toString()
+    {
+        return $this->date;
+    }
+
     /**
      * @return mixed
      */

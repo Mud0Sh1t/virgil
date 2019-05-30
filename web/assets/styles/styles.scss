@@ -16,6 +16,9 @@ body{
   section{
     width: 100%;
     article {
+      h1{
+        color:#ffffff !important;
+      }
       p {
         color: #878787;
       }
@@ -39,6 +42,13 @@ body{
           max-height:720px;
           width: 100%;
           height: 100%;
+        }
+      }
+
+      // NEWS
+      .new{
+        p{
+          color:#ffffff;
         }
       }
     }

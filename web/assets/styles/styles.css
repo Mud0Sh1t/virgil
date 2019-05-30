@@ -12,6 +12,8 @@ body {
   background-color: #000000; }
   body section {
     width: 100%; }
+    body section article h1 {
+      color: #ffffff !important; }
     body section article p {
       color: #878787; }
     body section article a {
@@ -31,6 +33,8 @@ body {
         max-height: 720px;
         width: 100%;
         height: 100%; }
+    body section article .new p {
+      color: #ffffff; }
   body footer #social-network ul li {
     color: #878787 !important; }
     body footer #social-network ul li a {
