@@ -9,6 +9,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints\DateTime;
+
 /**
  * @ORM\Entity
  * @ORM\Table(name="News")
@@ -28,18 +30,21 @@ class NewsEntity
     private $name;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=false)
      */
-    private $date;
+    private $createAt;
 
     /**
      * @ORM\Column(type="text")
      */
     private $description;
 
-    public function __toString()
+    public function __construct()
     {
-        return $this->date;
+        $this->setCreateAt(new \DateTime('now'));
+        if ($this->getCreateAt() === null) {
+            $this->setCreateAt(new \DateTime('now'));
+        }
     }
 
     /**
@@ -66,20 +71,21 @@ class NewsEntity
         return $this->name;
     }
 
+
     /**
-     * @param mixed $date
+     * @param mixed $createAt
      */
-    public function setDate($date)
+    public function setCreateAt($createAt)
     {
-        $this->date = $date;
+        $this->createAt = $createAt;
     }
 
     /**
      * @return mixed
      */
-    public function getDate()
+    public function getCreateAt()
     {
-        return $this->date;
+        return $this->createAt;
     }
 
     /**

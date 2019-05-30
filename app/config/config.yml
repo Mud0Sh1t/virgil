@@ -35,6 +35,8 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
 
 # Doctrine Configuration
 doctrine:
@@ -101,3 +103,7 @@ easy_admin:
                 title:  'Ajouter une news'
             edit:
                 title:  'Editer une news'
+            form:
+                fields:
+                    - { property: 'name', label: 'Nom :' }
+                    - { property: 'description', label: 'Description :' ,type: 'fos_ckeditor' }

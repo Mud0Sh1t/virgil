@@ -10,8 +10,8 @@
                         <div class="row">
                             <div class="col new mt-5 mb-5">
                                 <p>{{ new.name }}</p>
-                                <p>{{ new.date|date("m/d/Y") }}</p>
-                                <p>{{ new.description }}</p>
+                                <p>{{ new.createAt|date("m/d/Y") }}</p>
+                                {{ new.description|raw }}
                             </div>
                         </div>
                     {% endfor %}
