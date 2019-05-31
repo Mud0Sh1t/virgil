@@ -23,6 +23,14 @@
         -->
     </head>
     <body>
+        <nav class="container">
+            <ul class="nav">
+                <li class="nav-item mr-3"><a href="{{ path('homepage') }}">Home</a></li>
+                <li class="nav-item ml-3 mr-3"><a href="{{ path('news') }}">News</a></li>
+                <li class="nav-item ml-3 mr-3"><a href="{{ path('shows') }}">Concerts</a></li>
+                <li class="nav-item ml-3 mr-3"><a href="/TheNinthDoor">BO Test</a></li>
+            </ul>
+        </nav>
         {% block body %}{% endblock %}
         <footer class="container">
             <div id="social-network" class="row">

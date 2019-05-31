@@ -10,10 +10,12 @@
 
 body {
   background-color: #000000; }
+  body h1 {
+    color: #ffffff !important; }
+  body h3 {
+    color: #ffffff !important; }
   body section {
     width: 100%; }
-    body section article h1 {
-      color: #ffffff !important; }
     body section article p {
       color: #878787; }
     body section article a {

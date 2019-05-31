@@ -13,12 +13,27 @@
 
 body{
   background-color: #000000;
+  h1{
+    color:#ffffff !important;
+  }
+  h3{
+    color: #ffffff !important;
+  }
+  nav{
+    ul{
+      li{
+        a{
+
+        }
+        a:hover{
+
+        }
+      }
+    }
+  }
   section{
     width: 100%;
     article {
-      h1{
-        color:#ffffff !important;
-      }
       p {
         color: #878787;
       }

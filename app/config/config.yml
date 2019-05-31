@@ -94,6 +94,17 @@ easy_admin:
                 title:  'Ajouter une date de concert'
             edit:
                 title:  'Editer une date de concert'
+            form:
+                fields:
+                - { property: 'name', label: 'Nom :' }
+                - { property: 'concertHall', label: 'Salle de concert :' }
+                - { property: 'date', label: 'Date :' }
+                - { property: 'info', label: 'info :' ,type: 'fos_ckeditor' }
+                - { property: 'name', label: 'Nom :' }
+                - { property: 'adress', label: 'Adresse :' }
+                - { property: 'region', label: 'Région :' }
+                - { property: 'country', label: 'Pays :' }
+                - { property: 'bookingLink', label: 'Lien de réservation :' }
         NewsEntity:
             class: AppBundle\Entity\NewsEntity
             label: 'News'
