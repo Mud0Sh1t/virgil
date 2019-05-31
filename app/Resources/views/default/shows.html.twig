@@ -4,31 +4,31 @@
     <section>
         <article class="container">
                 <h1>Nos concerts</h1>
-            <div class="row">
-                <div class="col-6 justify-content-center">
-                    {% for show in shows %}
-                        <div class="row">
-                            <div class="col new mt-5 mb-5">
-                                <h3>{{ show.name }}</h3>
-                                <p>Le : {{ show.date|date("m/d/Y") }}, à {{ show.date|date("H:i") }}</p>
-                                {% if show.adress is defined %}
-                                    <p>Adresse : {{ show.adress }}</p>
-                                {% endif %}
-                                {% if show.city is defined %}
-                                    <p>Ville : {{ show.city }}</p>
-                                {% endif %}
-                                {% if show.region is defined %}
-                                    <p>Région : {{ show.region }}</p>
-                                {% endif %}
-                                {% if show.country is defined %}
-                                    <p>Pays : {{ show.country }}</p>
-                                {% endif %}
+                <div class="row">
+                    <div class="col-6 justify-content-center">
+                        {% for show in shows %}
+                            <div class="row">
+                                <div class="col shows-container mt-5">
+                                    <h3><a href="{{ path('show', { 'id': show.id }) }}">{{ show.name }}</a></h3>
+                                    <p>Le : {{ show.date|date("m/d/Y") }}, à {{ show.date|date("H:i") }}</p>
+                                    <p>Lieu : {{ show.concertHall }}</p>
+                                    {% if show.adress is defined and show.adress is not null %}
+                                        <p>Adresse : {{ show.adress }}</p>
+                                    {% endif %}
+                                    {% if show.city is defined and show.city is not null %}
+                                        <p>Ville : {{ show.city }}</p>
+                                    {% endif %}
+                                    {% if show.region is defined and show.region is not null %}
+                                        <p>Région : {{ show.region }}</p>
+                                    {% endif %}
+                                    {% if show.country is defined and show.country is not null  %}
+                                        <p>Pays : {{ show.country }}</p>
+                                    {% endif %}
+                                </div>
                             </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-
         </article>
     </section>
 

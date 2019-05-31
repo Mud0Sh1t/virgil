@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section>
+    <article class="container">
+        <div class="row">
+            <div class="col mt-5 mb-5 container-show">
+                <h3>{{ show.name }}</h3>
+                <p>Le : {{ show.date|date("m/d/Y") }}, à {{ show.date|date("H:i") }}</p>
+                <p>Lieu : {{ show.concertHall }}</p>
+                {% if show.adress is defined and show.adress is not null %}
+                    <p>Adresse : {{ show.adress }}</p>
+                {% endif %}
+                {% if show.city is defined and show.city is not null %}
+                    <p>Ville : {{ show.city }}</p>
+                {% endif %}
+                {% if show.region is defined and show.region is not null %}
+                    <p>Région : {{ show.region }}</p>
+                {% endif %}
+                {% if show.country is defined and show.country is not null  %}
+                    <p>Pays : {{ show.country }}</p>
+                {% endif %}
+                {% if show.info is defined and show.info is not null %}
+                    <p>Information supplémentaire :</p>
+                    {{ show.info|raw }}>
+                {% endif %}
+                {% if show.bookingLink is defined and show.bookingLink is not null %}
+                    <p>Réserve ta place <a href="{{ show.bookingLink }}" target="_blank">ici</a></p>
+                {% endif %}
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}

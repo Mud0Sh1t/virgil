@@ -34,4 +34,17 @@ class ShowsController extends Controller
           ['shows' => $shows]
         );
     }
+
+    /**
+     * @Route("/show/{id}", name="show")
+     */
+    public function ShowAction($id)
+    {
+        $show = $this->showsRepository->findOneById($id);
+
+        return $this->render('default/show.html.twig',
+            ['show' => $show]
+        );
+
+    }
 }

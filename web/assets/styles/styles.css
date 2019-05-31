@@ -35,8 +35,19 @@ body {
         max-height: 720px;
         width: 100%;
         height: 100%; }
-    body section article .new p {
+    body section article .new {
+      border-bottom: 1px solid #ffffff; }
+      body section article .new p {
+        color: #ffffff; }
+    body section article .shows-container {
+      border-bottom: 1px solid #ffffff; }
+      body section article .shows-container p {
+        color: #ffffff; }
+    body section article .container-show p {
       color: #ffffff; }
+      body section article .container-show p a {
+        color: #ffffff !important;
+        text-decoration: underline; }
   body footer #social-network ul li {
     color: #878787 !important; }
     body footer #social-network ul li a {

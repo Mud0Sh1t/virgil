@@ -102,6 +102,7 @@ easy_admin:
                 - { property: 'info', label: 'info :' ,type: 'fos_ckeditor' }
                 - { property: 'name', label: 'Nom :' }
                 - { property: 'adress', label: 'Adresse :' }
+                - { property: 'city', label: 'Ville :'}
                 - { property: 'region', label: 'Région :' }
                 - { property: 'country', label: 'Pays :' }
                 - { property: 'bookingLink', label: 'Lien de réservation :' }

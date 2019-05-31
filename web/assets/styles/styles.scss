@@ -62,8 +62,28 @@ body{
 
       // NEWS
       .new{
+        border-bottom:1px solid #ffffff;
         p{
           color:#ffffff;
+        }
+      }
+
+      //ALL SHOWS
+      .shows-container{
+        border-bottom:1px solid #ffffff;
+        p{
+          color:#ffffff;
+        }
+      }
+
+      //ONE SHOW SELECT
+      .container-show{
+        p{
+          color:#ffffff;
+          a{
+            color:#ffffff !important;
+            text-decoration:underline;
+          }
         }
       }
     }
