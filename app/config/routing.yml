@@ -5,4 +5,4 @@ app:
 easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/AdminController.php"
     type:     annotation
-    prefix:   /TheNinthDoor
+    prefix:   '%urlBO%'
