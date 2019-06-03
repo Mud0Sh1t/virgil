@@ -10,24 +10,13 @@ namespace AppBundle\Repository;
 
 
 use AppBundle\Entity\ShowEntity;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Persistence\ManagerRegistry;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityRepository;
 
-class ShowsRepository extends ServiceEntityRepository
+class ShowsRepository extends EntityRepository
 {
-    private $manager;
-
-    public function __construct(ManagerRegistry $registry, EntityManagerInterface $manager)
-    {
-        parent::__construct($registry, ShowEntity::class);
-
-        $this->manager = $manager;
-    }
-
     public function findByMostRecent()
     {
-        $qb = $this->manager->createQueryBuilder();
+        $qb = $this->_em->createQueryBuilder();
 
         return $qb->select('s')
             ->from(ShowEntity::class, 's')

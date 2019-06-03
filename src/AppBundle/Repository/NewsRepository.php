@@ -9,23 +9,14 @@
 namespace AppBundle\Repository;
 
 use AppBundle\Entity\NewsEntity;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Persistence\ManagerRegistry;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityRepository;
 
-class NewsRepository extends ServiceEntityRepository
+class NewsRepository extends EntityRepository
 {
-    private $manager;
-
-    public function __construct(ManagerRegistry $registry, EntityManagerInterface $manager)
-    {
-        parent::__construct($registry, NewsEntity::class);
-        $this->manager = $manager;
-    }
 
     public function findByMostRecent()
     {
-        $qb = $this->manager->createQueryBuilder();
+        $qb = $this->_em->createQueryBuilder();
 
         return $qb->select('n')
             ->from(NewsEntity::class, 'n')

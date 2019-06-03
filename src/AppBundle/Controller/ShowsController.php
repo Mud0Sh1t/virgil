@@ -9,26 +9,20 @@
 namespace AppBundle\Controller;
 
 
+use AppBundle\Entity\ShowEntity;
 use AppBundle\Repository\ShowsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ShowsController extends Controller
 {
-    private $showsRepository;
-
-    public function __construct(ShowsRepository $showsRepository)
-    {
-        $this->showsRepository = $showsRepository;
-    }
-
 
     /**
      * @Route("/shows", name="shows")
      */
     public function ShowsAction()
     {
-        $shows = $this->showsRepository->findByMostRecent();
+        $shows = $this->getDoctrine()->getRepository(ShowEntity::class)->findByMostRecent();
 
         return $this->render('default/shows.html.twig',
           ['shows' => $shows]
@@ -40,7 +34,7 @@ class ShowsController extends Controller
      */
     public function ShowAction($id)
     {
-        $show = $this->showsRepository->findOneById($id);
+        $show = $this->getDoctrine()->getRepository(ShowEntity::class)->find($id);
 
         return $this->render('default/show.html.twig',
             ['show' => $show]
