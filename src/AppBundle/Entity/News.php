@@ -15,7 +15,7 @@ use Symfony\Component\Validator\Constraints\DateTime;
  * @ORM\Entity(repositoryClass="AppBundle\Repository\NewsRepository")
  * @ORM\Table(name="News")
  */
-class NewsEntity
+class News
 {
     /**
      * @ORM\Id

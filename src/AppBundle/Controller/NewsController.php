@@ -8,8 +8,7 @@
 
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\NewsEntity;
-use AppBundle\Repository\NewsRepository;
+use AppBundle\Entity\News;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -21,7 +20,7 @@ class NewsController extends Controller
      */
     public function NewsAction()
     {
-        $news = $this->getDoctrine()->getRepository(NewsEntity::class)->findByMostRecent();
+        $news = $this->getDoctrine()->getRepository(News::class)->findByMostRecent();
 
         return $this->render('default/news.html.twig',
             ['news' => $news]
@@ -33,7 +32,7 @@ class NewsController extends Controller
      */
     public function NewAction($id)
     {
-        $new = $this->getDoctrine()->getRepository(NewsEntity::class)->find($id);
+        $new = $this->getDoctrine()->getRepository(News::class)->find($id);
 
         return $this->render('default/new.html.twig',
             ['new' => $new]

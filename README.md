@@ -60,7 +60,12 @@ It comes pre-configured with the following bundles:
 
   * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
     integration
+    
+The bundles added :
 
+  * [**EasyAdminBundle**][17] - EasyAdminBundle creates administration backends for your Symfony applications.
+  * [**FOSCKEditorBundle**][18] - The bundle integrates CKEditor into Symfony via the Form Component.
+  * [**VichUploaderBundle**][19] - In this article you'll learn how to allow uploading files in your backends, both images and regular files, such as PDF files.
 All libraries and bundles included in the Symfony Standard Edition are
 released under the MIT or BSD license.
 
@@ -77,3 +82,6 @@ Enjoy!
 [14]: https://symfony.com/doc/current/setup/built_in_web_server.html
 [15]: https://symfony.com/doc/current/setup.html
 [16]: https://www.facebook.com/virgil.metal/
+[17]: https://symfony.com/doc/master/bundles/EasyAdminBundle/index.html
+[18]: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html
+[19]: https://symfony.com/doc/master/bundles/EasyAdminBundle/integration/vichuploaderbundle.html

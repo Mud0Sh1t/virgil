@@ -9,7 +9,7 @@
 namespace AppBundle\Repository;
 
 
-use AppBundle\Entity\ShowEntity;
+use AppBundle\Entity\Show;
 use Doctrine\ORM\EntityRepository;
 
 class ShowsRepository extends EntityRepository
@@ -19,7 +19,7 @@ class ShowsRepository extends EntityRepository
         $qb = $this->_em->createQueryBuilder();
 
         return $qb->select('s')
-            ->from(ShowEntity::class, 's')
+            ->from(Show::class, 's')
             ->orderBy('s.date', 'DESC')
             ->getQuery()
             ->getResult();

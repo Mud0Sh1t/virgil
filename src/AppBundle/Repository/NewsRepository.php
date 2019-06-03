@@ -8,7 +8,7 @@
 
 namespace AppBundle\Repository;
 
-use AppBundle\Entity\NewsEntity;
+use AppBundle\Entity\News;
 use Doctrine\ORM\EntityRepository;
 
 class NewsRepository extends EntityRepository
@@ -19,7 +19,7 @@ class NewsRepository extends EntityRepository
         $qb = $this->_em->createQueryBuilder();
 
         return $qb->select('n')
-            ->from(NewsEntity::class, 'n')
+            ->from(News::class, 'n')
             ->orderBy('n.createAt', 'DESC')
             ->getQuery()
             ->getResult();

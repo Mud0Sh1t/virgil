@@ -78,22 +78,19 @@ easy_admin:
     # design du BO Virgil WebSite
     design:
         brand_color: 'red'
-        # Override template Twig
-        #templates:
-            #list: 'easyAdmin/list.html.twig'
     list:
         max_results: 30
     # change the following to the namespaces of your own entities
     entities:
         ShowEntity:
-            class: AppBundle\Entity\ShowEntity
+            class: AppBundle\Entity\Show
             label: 'Concert'
             list:
                 title: 'Liste des concerts'
             new:
-                title:  'Ajouter une date de concert'
+                title: 'Ajouter une date de concert'
             edit:
-                title:  'Editer une date de concert'
+                title: 'Editer une date de concert'
             form:
                 fields:
                 - { property: 'name', label: 'Nom :' }
@@ -106,16 +103,38 @@ easy_admin:
                 - { property: 'region', label: 'Région :' }
                 - { property: 'country', label: 'Pays :' }
                 - { property: 'bookingLink', label: 'Lien de réservation :' }
-        NewsEntity:
-            class: AppBundle\Entity\NewsEntity
+        NewsEntiy:
+            class: AppBundle\Entity\News
             label: 'News'
             list:
                 title: 'Liste des news'
             new:
-                title:  'Ajouter une news'
+                title: 'Ajouter une news'
             edit:
-                title:  'Editer une news'
+                title: 'Editer une news'
             form:
                 fields:
                     - { property: 'name', label: 'Nom :' }
                     - { property: 'description', label: 'Description :' ,type: 'fos_ckeditor' }
+        Media:
+            class: AppBundle\Entity\Media
+            label: 'Média'
+            new:
+                title:  'Ajouter une images'
+            list:
+                title:  'Liste des médias'
+                fields:
+                    - { property: 'image', type: 'image', base_path: '%app.path.media%'}
+                show:
+                    - { property: 'image', type: 'image', base_path: '%app.path.media%' }
+            form:
+                fields:
+                    - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
+
+#Config Vich Uploader
+vich_uploader:
+    db_driver: orm
+    mappings:
+        Media:
+            uri_prefix:         '%app.path.media%'
+            upload_destination: '%kernel.project_dir%/web%app.path.media%'
