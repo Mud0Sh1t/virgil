@@ -66,6 +66,7 @@ The bundles added :
   * [**EasyAdminBundle**][17] - EasyAdminBundle creates administration backends for your Symfony applications.
   * [**FOSCKEditorBundle**][18] - The bundle integrates CKEditor into Symfony via the Form Component.
   * [**VichUploaderBundle**][19] - In this article you'll learn how to allow uploading files in your backends, both images and regular files, such as PDF files.
+
 All libraries and bundles included in the Symfony Standard Edition are
 released under the MIT or BSD license.
 
