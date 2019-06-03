@@ -16,5 +16,8 @@
 /vendor/
 /web/bundles/
 .idea
-/web/assets/img/upload/
 !/web/assets/img/upload/
+/web/assets/img/upload/*
+!/web/assets/img/merchandising/
+/web/assets/img/merchandising/*
+/web/assets/style/.sass-cache/*

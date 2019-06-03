@@ -34,6 +34,7 @@ body{
   section{
     width: 100%;
     article {
+
       p {
         color: #878787;
       }
@@ -46,20 +47,6 @@ body{
       a:hover {
         color: #ffffff !important;
       }
-      .video-container{
-        position: relative;
-        padding-bottom: 56.25%;
-        iframe{
-          position: absolute;
-          top: 0;
-          left: 0;
-          max-height: 1280px;
-          max-height:720px;
-          width: 100%;
-          height: 100%;
-        }
-      }
-
       // NEWS
       .new{
         border-bottom:1px solid #ffffff;
@@ -67,7 +54,6 @@ body{
           color:#ffffff;
         }
       }
-
       //ALL SHOWS
       .shows-container{
         border-bottom:1px solid #ffffff;
@@ -75,7 +61,6 @@ body{
           color:#ffffff;
         }
       }
-
       //ONE SHOW SELECT
       .container-show{
         p{

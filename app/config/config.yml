@@ -87,27 +87,35 @@ easy_admin:
             label: 'Concert'
             list:
                 title: 'Liste des concerts'
+                fields:
+                    - { property: 'name', label: 'Nom' }
+                    - { property: 'concertHall', label: 'Salle' }
+                    - { property: 'date', label: 'Date' }
+                    - { property: 'city', label: 'Ville'}
             new:
                 title: 'Ajouter une date de concert'
             edit:
                 title: 'Editer une date de concert'
             form:
                 fields:
-                - { property: 'name', label: 'Nom :' }
-                - { property: 'concertHall', label: 'Salle de concert :' }
-                - { property: 'date', label: 'Date :' }
-                - { property: 'info', label: 'info :' ,type: 'fos_ckeditor' }
-                - { property: 'name', label: 'Nom :' }
-                - { property: 'adress', label: 'Adresse :' }
-                - { property: 'city', label: 'Ville :'}
-                - { property: 'region', label: 'Région :' }
-                - { property: 'country', label: 'Pays :' }
-                - { property: 'bookingLink', label: 'Lien de réservation :' }
+                    - { property: 'name', label: 'Nom :' }
+                    - { property: 'concertHall', label: 'Salle de concert :' }
+                    - { property: 'date', label: 'Date :' }
+                    - { property: 'info', label: 'information sur le concert :' ,type: 'fos_ckeditor' }
+                    - { property: 'name', label: 'Nom :' }
+                    - { property: 'adress', label: 'Adresse :' }
+                    - { property: 'city', label: 'Ville :'}
+                    - { property: 'region', label: 'Région :' }
+                    - { property: 'country', label: 'Pays :' }
+                    - { property: 'bookingLink', label: 'Lien de réservation :' }
         NewsEntiy:
             class: AppBundle\Entity\News
             label: 'News'
             list:
                 title: 'Liste des news'
+                fields:
+                    - { property: 'name', label: 'Nom' }
+                    - { property: 'createAt', label: 'Cree le' }
             new:
                 title: 'Ajouter une news'
             edit:
@@ -120,7 +128,9 @@ easy_admin:
             class: AppBundle\Entity\Media
             label: 'Média'
             new:
-                title:  'Ajouter une images'
+                title:  'Ajouter une image'
+            edit:
+                title:  'Editer une image'
             list:
                 title:  'Liste des médias'
                 fields:
@@ -130,6 +140,27 @@ easy_admin:
             form:
                 fields:
                     - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
+        Merch:
+            class: AppBundle\Entity\Merchandising
+            label: 'Merch'
+            new:
+                title:  'Ajouter une annonce'
+            edit:
+                title:  'Editer une annonce'
+            list:
+                title:  'Liste des annonces du merch'
+                fields:
+                    - { property: 'name', label: 'Nom' }
+                    - { property: 'image', type: 'image', base_path: '%app.path.merch%'}
+                show:
+                    - { property: 'image', type: 'image', base_path: '%app.path.merch%' }
+            form:
+                fields:
+                    - { property: 'name', label: 'Nom :' }
+                    - { property: 'description', label: 'Description :' }
+                    - { property: 'urlMerch', label: "Lien d'achat :" }
+                    - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
+
 
 #Config Vich Uploader
 vich_uploader:
@@ -138,3 +169,6 @@ vich_uploader:
         Media:
             uri_prefix:         '%app.path.media%'
             upload_destination: '%kernel.project_dir%/web%app.path.media%'
+        Merch:
+            uri_prefix:         '%app.path.merch%'
+            upload_destination: '%kernel.project_dir%/web%app.path.merch%'

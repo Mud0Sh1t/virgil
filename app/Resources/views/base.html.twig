@@ -26,8 +26,10 @@
         <nav class="container">
             <ul class="nav">
                 <li class="nav-item mr-3"><a href="{{ path('homepage') }}">Home</a></li>
+                <li class="nav-item mr-3"><a href="{{ path('biographie') }}">Bio</a></li>
                 <li class="nav-item ml-3 mr-3"><a href="{{ path('news') }}">News</a></li>
                 <li class="nav-item ml-3 mr-3"><a href="{{ path('shows') }}">Concerts</a></li>
+                <li class="nav-item ml-3 mr-3"><a href="{{ path('media') }}">Médias</a></li>
                 <li class="nav-item ml-3 mr-3"><a href="/TheNinthDoor">BO Test</a></li>
             </ul>
         </nav>
@@ -53,6 +55,8 @@
                 <p>content Copyright VIRGIL 2019</p>
             </div>
         </footer>
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+        <script type="text/javascript"></script>
+        {% endblock %}
     </body>
 </html>

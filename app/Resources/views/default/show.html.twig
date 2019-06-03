@@ -22,7 +22,7 @@
                 {% endif %}
                 {% if show.info is defined and show.info is not null %}
                     <p>Information supplémentaire :</p>
-                    {{ show.info|raw }}>
+                    {{ show.info|raw }}
                 {% endif %}
                 {% if show.bookingLink is defined and show.bookingLink is not null %}
                     <p>Réserve ta place <a href="{{ show.bookingLink }}" target="_blank">ici</a></p>

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section>
+    <article class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="mt-3 mb-3">Nos photos :</h3>
+                <div class="row">
+                {% for media in medias %}
+                    <div class="col-md-4 mt-4 mb-4">
+                        <img class="img-fluid" src="{{ asset('assets/img/upload/') }}{{media.image}}" alt="picture">
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <script src="{{ asset('assets/js/salvattore.min.js') }}"></script>
+{% endblock %}
