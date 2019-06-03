@@ -12,13 +12,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class MerchandisingController extends Controller
 {
     /**
-     * @Route("/merchandising", name="merchandising"
+     * @Route("/merchandising", name="merchandising")
      */
-    public function merchAction()
+    public function merchandisingAction()
     {
         $merchs = $this->getDoctrine()->getRepository(Merchandising::class)->findAll();
 
-        return $this->render('default/',
+        return $this->render('default/index.html.twig',
             ['merchs' => $merchs]
         );
     }
