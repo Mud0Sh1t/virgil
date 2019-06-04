@@ -134,14 +134,12 @@ easy_admin:
             list:
                 title:  'Liste des médias'
                 fields:
-                    - { property: 'name', label: 'Nom' }
-                    - { property: 'image', type: 'image', base_path: '%app.path.media%'}
+                    - { property: 'images', type: 'collection', base_path: '%app.path.media%'}
                 show:
-                    - { property: 'image', type: 'image', base_path: '%app.path.media%' }
+                    - { property: 'images', type: 'collection', base_path: '%app.path.media%' }
             form:
                 fields:
-                    - { property: 'name', label: 'Nom :' }
-                    - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
+                    - { property: 'images', label: 'Image :', type: 'collection', type_options: { entry_type : 'AppBundle\Form\Type\ImageType' , block_name: 'groups', allow_add: true, allow_delete: true, by_reference: false}  }
         Merch:
             class: AppBundle\Entity\Merchandising
             label: 'Merch'
@@ -171,6 +169,10 @@ vich_uploader:
         Media:
             uri_prefix:         '%app.path.media%'
             upload_destination: '%kernel.project_dir%/web%app.path.media%'
+            namer:
+                service: vich_uploader.namer_origname
         Merch:
             uri_prefix:         '%app.path.merch%'
             upload_destination: '%kernel.project_dir%/web%app.path.merch%'
+            namer:
+                service: vich_uploader.namer_origname

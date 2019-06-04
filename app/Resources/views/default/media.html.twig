@@ -8,29 +8,33 @@
                 <h3 class="mt-5 mb-3">Nos photos :</h3>
                 <div class="row justify-content-center">
                 {% for media in medias %}
+                    {% for image in media.images %}
                     <div class="col-md-4 mt-2 mb-2">
-                        <img class="img-fluid" onclick="openModal({{ media.id }});" src="{{ asset('assets/img/upload/') }}{{media.image}}" alt="{{ media.name }}">
+                        <img class="img-fluid" onclick="openModal({{ image.id }});" src="{{ asset('assets/img/upload/') }}{{image.image}}" alt="{{ image.name }}">
                     </div>
+                    {% endfor %}
                 {% endfor %}
                 </div>
             </div>
         </div>
 
         {% for media in medias %}
-        <!-- The Modal/Lightbox -->
-        <div id="myModal{{ media.id }}" class="modal">
-            <span class="close-cursor" onclick="closeModal({{ media.id }})">&times;</span>
-            <div class="modal-content">
-                <div class="mySlides text-center">
-                    <img src="{{ asset('assets/img/upload/') }}{{media.image}}" class="w-75 " alt="{{ media.name }}">
-                </div>
-                <!-- Caption text -->
-                <div class="caption-container">
-                    <p id="caption" class="mt-3">{{ media.name }}</p>
-                </div>
+            {% for image in media.images %}
+            <!-- The Modal/Lightbox -->
+            <div id="myModal{{ image.id }}" class="modal">
+                <span class="close-cursor" onclick="closeModal({{ image.id }})">&times;</span>
+                <div class="modal-content">
+                    <div class="mySlides text-center">
+                        <img src="{{ asset('assets/img/upload/') }}{{image.image}}" class="w-75 " alt="{{ image.name }}">
+                    </div>
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption" class="mt-3">{{ image.name }}</p>
+                    </div>
 
+                </div>
             </div>
-        </div>
+            {% endfor %}
         {% endfor %}
     </article>
 </section>

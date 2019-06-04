@@ -3,6 +3,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -23,21 +24,9 @@ class Media
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Image",cascade={"persist"})
      */
-    private $name;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @var string
-     */
-    private $image;
-
-    /**
-     * @Vich\UploadableField(mapping="Media", fileNameProperty="image")
-     * @var File
-     */
-    private $imageFile;
+    private $images;
 
     /**
      * @ORM\Column(type="datetime", nullable=false)
@@ -47,10 +36,9 @@ class Media
 
     public function __construct()
     {
-        $this->setCreateAt(new \DateTime('now'));
-        if ($this->getCreateAt() === null) {
-            $this->setCreateAt(new \DateTime('now'));
-        }
+        $this->setCreateAt(new \DateTime());
+
+        $this->images = new ArrayCollection();
     }
 
     /**
@@ -62,51 +50,29 @@ class Media
     }
 
     /**
-     * @param mixed $name
+     * @param string $images
      */
-    public function setName($name)
+    public function setImages($images)
     {
-        $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param string $image
-     */
-    public function setImage($image)
-    {
-        $this->image = $image;
+        $this->images = $images;
     }
 
     /**
      * @return string
      */
-    public function getImage()
+    public function getImages()
     {
-        return $this->image;
+        return $this->images;
     }
 
-    /**
-     * @param File $image
-     */
-    public function setImageFile(File $image = null)
+    public function addImage($images)
     {
-        $this->imageFile = $image;
+        $this->images->add($images);
     }
 
-    /**
-     * @return File
-     */
-    public function getImageFile()
+    public function removeImage($images)
     {
-        return $this->imageFile;
+        $this->images->removeElement($images);
     }
 
     /**
