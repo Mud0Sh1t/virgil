@@ -134,11 +134,13 @@ easy_admin:
             list:
                 title:  'Liste des médias'
                 fields:
+                    - { property: 'name', label: 'Nom' }
                     - { property: 'image', type: 'image', base_path: '%app.path.media%'}
                 show:
                     - { property: 'image', type: 'image', base_path: '%app.path.media%' }
             form:
                 fields:
+                    - { property: 'name', label: 'Nom :' }
                     - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
         Merch:
             class: AppBundle\Entity\Merchandising

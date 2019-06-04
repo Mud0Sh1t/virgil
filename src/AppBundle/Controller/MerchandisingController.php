@@ -18,7 +18,7 @@ class MerchandisingController extends Controller
     {
         $merchs = $this->getDoctrine()->getRepository(Merchandising::class)->findAll();
 
-        return $this->render('default/index.html.twig',
+        return $this->render('default/merchandising.html.twig',
             ['merchs' => $merchs]
         );
     }

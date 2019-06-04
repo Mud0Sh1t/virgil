@@ -1,0 +1,43 @@
+.view-media {
+  /* The Modal (background) */
+  /* Modal Content */
+  /* The Close Button */ }
+  .view-media .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 70px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); }
+  .view-media .modal-content {
+    position: relative;
+    background-color: transparent;
+    margin: auto;
+    padding: 0;
+    width: 75%;
+    border: none !important;
+    /* Caption text */ }
+    .view-media .modal-content .caption-container {
+      text-align: center;
+      background-color: black;
+      color: #ffffff; }
+      .view-media .modal-content .caption-container #caption {
+        color: #ffffff; }
+  .view-media .close-cursor {
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold; }
+  .view-media .close-cursor:hover,
+  .view-media .close-cursor:focus {
+    color: #999999;
+    text-decoration: none;
+    cursor: pointer; }
+
+/*# sourceMappingURL=lightBox.css.map */

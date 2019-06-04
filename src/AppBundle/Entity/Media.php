@@ -23,6 +23,11 @@ class Media
     private $id;
 
     /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $name;
+
+    /**
      * @ORM\Column(type="string", length=255)
      * @var string
      */
@@ -54,6 +59,22 @@ class Media
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**

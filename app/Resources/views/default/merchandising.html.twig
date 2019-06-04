@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section>
+    <article class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="mt-5 mb-3">Merch :</h3>
+            </div>
+            <div class="row justify-content-center">
+                {% for merch in merchs %}
+                    <div class="col-md-6 mt-2 mb-2">
+                        <img class="img-fluid" src="{{ asset('assets/img/merchandising/') }}{{merch.image}}" alt="{{ merch.name }}">
+                        <a href="{{ merch.urlMerch }}" target="_blank">
+                            <p class="text-center text-white mt-3">{{ merch.name }}</p>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
