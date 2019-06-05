@@ -10,7 +10,7 @@
                 {% for media in medias %}
                     {% for image in media.images %}
                     <div class="col-md-4 mt-2 mb-2">
-                        <img class="img-fluid" onclick="openModal({{ image.id }});" src="{{ asset('assets/img/upload/') }}{{image.image}}" alt="{{ image.name }}">
+                        <img class="img-fluid" id="picture{{ image.id }}" onclick="openModal({{ image.id }});" src="{{ asset('assets/img/upload/') }}{{image.image}}" alt="{{ image.name }}">
                     </div>
                     {% endfor %}
                 {% endfor %}
@@ -21,7 +21,7 @@
         {% for media in medias %}
             {% for image in media.images %}
             <!-- The Modal/Lightbox -->
-            <div id="myModal{{ image.id }}" class="modal">
+            <div id="myModal{{ image.id }}" onclick="closeModal({{ image.id }})" class="modal">
                 <span class="close-cursor" onclick="closeModal({{ image.id }})">&times;</span>
                 <div class="modal-content">
                     <div class="mySlides text-center">
@@ -47,13 +47,18 @@
 
 {% block javascripts %}
     <script type="text/javascript">
-        // Open the Modal
-        function openModal(n) {
-            document.getElementById("myModal"+n+"").style.display = "block";
-        }
-        // Close the Modal
-        function closeModal(n) {
-            document.getElementById("myModal"+n+"").style.display = "none";
+        /*document.querySelector('img').addEventListener('click', (n) => {
+            document.getElementById("myModal" + n + "").style.display = "block";
+        });*/
+        if(window.innerWidth > 767) {
+            // Open the Modal
+            function openModal(n){
+                document.getElementById("myModal" + n + "").style.display = "block";
+            }
+            // Close the Modal
+            function closeModal(n){
+                document.getElementById("myModal" + n + "").style.display = "none";
+            }
         }
     </script>
 {% endblock %}

@@ -134,11 +134,13 @@ easy_admin:
             list:
                 title:  'Liste des médias'
                 fields:
-                    - { property: 'images', type: 'collection', base_path: '%app.path.media%'}
+                    - { property: 'name', label: 'Nom :' }
+                    - { property: 'images', template: 'easy_admin/_field_media_images.html.twig'}
                 show:
                     - { property: 'images', type: 'collection', base_path: '%app.path.media%' }
             form:
                 fields:
+                    - { property: 'name', label: 'Nom :' }
                     - { property: 'images', label: 'Image :', type: 'collection', type_options: { entry_type : 'AppBundle\Form\Type\ImageType' , block_name: 'groups', allow_add: true, allow_delete: true, by_reference: false}  }
         Merch:
             class: AppBundle\Entity\Merchandising
@@ -160,6 +162,28 @@ easy_admin:
                     - { property: 'description', label: 'Description :' }
                     - { property: 'urlMerch', label: "Lien d'achat :" }
                     - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
+        Sponsor:
+            class: AppBundle\Entity\Sponsors
+            label: 'Sponsor'
+            new:
+                title: 'Ajouter un sponsor'
+            edit:
+                title: 'Editer un sponsor'
+            list:
+                title: 'Liste des sponsors'
+                fields:
+                    - { property: 'name', label: 'Nom :' }
+                    - { property: 'information', label: 'Information :' }
+                    - { property: 'urlSponsor', label: 'Url :' }
+                    - { property: 'image', label: 'Logo :', type: 'image', base_path: '%app.path.sponsors%' }
+                show:
+                    - { property: 'image', type: 'image', base_path: '%app.path.sponsors%' }
+            form:
+                fields:
+                    - { property: 'name', label: 'Nom :' }
+                    - { property: 'information', label: 'Information :' }
+                    - { property: 'urlSponsor', label: 'Lien du sponsor :' }
+                    - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
 
 
 #Config Vich Uploader
@@ -168,11 +192,16 @@ vich_uploader:
     mappings:
         Media:
             uri_prefix:         '%app.path.media%'
-            upload_destination: '%kernel.project_dir%/web%app.path.media%'
+            upload_destination: '%kernel.project_dir%/web/%app.path.media%'
             namer:
                 service: vich_uploader.namer_origname
         Merch:
             uri_prefix:         '%app.path.merch%'
-            upload_destination: '%kernel.project_dir%/web%app.path.merch%'
+            upload_destination: '%kernel.project_dir%/web/%app.path.merch%'
+            namer:
+                service: vich_uploader.namer_origname
+        Sponsor:
+            uri_prefix:         '%app.path.sponsors%'
+            upload_destination: '%kernel.project_dir%/web/%app.path.sponsors%'
             namer:
                 service: vich_uploader.namer_origname

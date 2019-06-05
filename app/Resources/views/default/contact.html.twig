@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section>
+    <article class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="mt-5 mb-5">Nous contactez :</h3>
+                <p class="text-white">Contactez nous à cette adresse : <a class="text-white text-lowercase" href="mailto:virgilband@hotmail.com" target="_blank">virgilband@hotmail.com</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="mt-5 mb-5">Nous sponsors :</h3>
+            </div>
+            {% for sponsor in sponsors %}
+            <div class="col-md-6 mt-2 mb-2">
+                <img class="img-fluid" src="{{ asset('assets/img/sponsor/') }}{{sponsor.image}}" alt="Logo {{ sponsor.name }}">
+                <a href="{{ sponsor.urlSponsor }}" target="_blank">
+                    <p class="text-center text-white mt-3">{{ sponsor.name }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+</section>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}

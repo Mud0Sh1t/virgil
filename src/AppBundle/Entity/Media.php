@@ -24,7 +24,12 @@ class Media
     private $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Image",cascade={"persist"})
+     * @ORM\Column(type="string", length=100, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Image",cascade={"persist", "remove"})
      */
     private $images;
 
@@ -47,6 +52,22 @@ class Media
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 
     /**

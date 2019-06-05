@@ -1,0 +1,12 @@
+{% if item.images %}
+    <table role="presentation" border="0" cellspacing="0" style="border: none !important;">
+        {% for image in item.images %}
+        <tr style="border:0 !important;">
+            <td align="center" style="text-align:center;border: 0 !important;" width="40%">
+                <img src="{{ asset('assets/img/upload/') }}{{ image.image }}" style="width:40%">
+                <p>{{ image.name }}</p>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}

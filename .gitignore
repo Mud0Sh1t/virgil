@@ -20,3 +20,5 @@
 /web/assets/img/upload/*
 !/web/assets/img/merchandising/
 /web/assets/img/merchandising/*
+!/web/assets/img/sponsor/
+/web/assets/img/sponsor/*
