@@ -25,16 +25,22 @@
     </head>
     <body>
         <nav class="container">
-            <ul class="nav">
-                <li class="nav-item mr-3"><a href="{{ path('homepage') }}">Home</a></li>
-                <li class="nav-item ml-3 mr-3"><a href="{{ path('news') }}">News</a></li>
-                <li class="nav-item ml-3 mr-3"><a href="{{ path('biographie') }}">Bio</a></li>
-                <li class="nav-item ml-3 mr-3"><a href="{{ path('shows') }}">Concerts</a></li>
-                <li class="nav-item ml-3 mr-3"><a href="{{ path('media') }}">Médias</a></li>
-                <li class="nav-item ml-3 mr-3"><a href="{{ path('merchandising') }}">Merch</a></li>
-                <li class="nav-item ml-3 mr-3"><a href="{{ path('contact') }}">Contact</a></li>
-                <li class="nav-item ml-3 mr-3"><a href="/TheNinthDoor">BO Test</a></li>
-            </ul>
+            <div class="row">
+                <div>
+                    <a href="{{ path('homepage') }}">
+                        <img src="{{ asset('assets/img/Logo-Virgil.png') }}" class="w-75">
+                    </a>
+                </div>
+                <ul class="nav mt-3 mb-3">
+                    <li class="nav-item mr-3"><a href="{{ path('homepage') }}" class="text-white">Home</a></li>
+                    <li class="nav-item ml-3 mr-3"><a href="{{ path('news') }}">News</a></li>
+                    <li class="nav-item ml-3 mr-3"><a href="{{ path('biographie') }}">Bio</a></li>
+                    <li class="nav-item ml-3 mr-3"><a href="{{ path('shows') }}">Concerts</a></li>
+                    <li class="nav-item ml-3 mr-3"><a href="{{ path('media') }}">Médias</a></li>
+                    <li class="nav-item ml-3 mr-3"><a href="{{ path('merchandising') }}">Merch</a></li>
+                    <li class="nav-item ml-3 mr-3"><a href="{{ path('contact') }}">Contact</a></li>
+                </ul>
+            </div>
         </nav>
         {% block body %}{% endblock %}
         <footer class="container">

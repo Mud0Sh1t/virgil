@@ -22,12 +22,4 @@ class DefaultController extends Controller
     {
         return $this->render('default/bio.html.twig');
     }
-
-    /**
-     * @Route("/admin")
-     */
-    public function adminAction()
-    {
-
-    }
 }

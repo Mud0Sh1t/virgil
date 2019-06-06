@@ -185,7 +185,6 @@ easy_admin:
                     - { property: 'urlSponsor', label: 'Lien du sponsor :' }
                     - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
 
-
 #Config Vich Uploader
 vich_uploader:
     db_driver: orm
