@@ -6,11 +6,11 @@
         <div class="row">
             <div class="col-md-12">
                 <h3 class="mt-5 mb-3">Nos photos :</h3>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center container-media">
                 {% for media in medias %}
                     {% for image in media.images %}
                     <div class="col-md-4 mt-2 mb-2">
-                        <img class="img-fluid" id="{{ image.id }}" src="{{ asset('assets/img/upload/') }}{{image.image}}" alt="{{ image.name }}">
+                        <img class="img-fluid img-media" id="{{ image.id }}" src="{{ asset('assets/img/upload/') }}{{image.image}}" alt="{{ image.name }}">
                     </div>
                     {% endfor %}
                 {% endfor %}
@@ -39,7 +39,7 @@
 {% block javascripts %}
 <script type="text/javascript">
     if(window.innerWidth > 767) {
-        const select = document.querySelectorAll('img');
+        const select = document.querySelectorAll('.img-media');
         for(var i=0;i < select.length; i++){
             const item = select[i];
             const Id = item.getAttribute('id');
