@@ -47,7 +47,7 @@
             const alt = item.getAttribute('alt');
             document.getElementById(Id).onclick = function () {
                 document.querySelector(".myModal").style.display = "block";
-                document.querySelector('.mySlides').innerHTML = '<img src="'+src+'" class="w-75"/>';
+                document.querySelector('.mySlides').innerHTML = '<img src="'+src+'" class="w-75" alt="'+alt+'"/>';
                 document.querySelector('.caption-container').innerHTML = '<p id="caption" class="mt-3">'+alt+'</p>'
             };
         }
