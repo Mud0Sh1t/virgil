@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section>
+        <article class="container">
+            <h3>News</h3>
+            <div class="row">
+                <div class="col-6 justify-content-center">
+                    <div class="row">
+                        <div class="col new mt-5 mb-5">
+                            <p>{{ new.name }}</p>
+                            <p>{{ new.createAt|date("m/d/Y") }}</p>
+                            {{ new.description|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}

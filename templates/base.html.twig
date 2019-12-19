@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="author" content="Maxence Vast">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Virgil - Official WebSite{% endblock %}</title>
+    <meta name="description" content="The official website of Virgil, Deathcore/Black/Melodic Death, Metal band from north of France..">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/styles/styles.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <!--
+      :........:::........:::........::
+      :'#######:::'#######:::'#######::
+      '##.....##:'##.....##:'##.....##:
+      ##::::..:: ##::::..:: ##::::..:::
+      ########:: ########:: ########:::
+      ##.....##: ##.....##: ##.....##::
+      ##:::::##: ##:::::##: ##:::::##::
+      .#######::..#######::..#######:::
+      :.......::::.......::::.......:::
+    -->
+</head>
+<body>
+<nav class="container">
+    <div class="row">
+        <div>
+            <a href="{{ path('homepage') }}">
+                <img src="{{ asset('assets/img/Logo-Virgil.png') }}" class="w-75">
+            </a>
+        </div>
+        <ul class="nav mt-3 mb-3">
+            <li class="nav-item mr-3"><a href="{{ path('homepage') }}" class="text-white">Home</a></li>
+            <li class="nav-item ml-3 mr-3"><a href="{{ path('news') }}">News</a></li>
+            <li class="nav-item ml-3 mr-3"><a href="{{ path('biographie') }}">Bio</a></li>
+            <li class="nav-item ml-3 mr-3"><a href="{{ path('shows') }}">Concerts</a></li>
+            <li class="nav-item ml-3 mr-3"><a href="{{ path('media') }}">Médias</a></li>
+            <li class="nav-item ml-3 mr-3"><a href="{{ path('merchandising') }}">Merch</a></li>
+            <li class="nav-item ml-3 mr-3"><a href="{{ path('contact') }}">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+{% block body %}{% endblock %}
+<footer class="container">
+    <div id="social-network" class="row">
+        <div class="col">
+            <ul class="nav justify-content-center">
+                <li class="nav-item m-3">
+                    <a href="https://www.facebook.com/virgil.metal/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li class="nav-item m-3">
+                    <a href="https://www.youtube.com/channel/UCLmNGciku8Flzio_lDThV0w" target="_blank"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li class="nav-item m-3">
+                    <a href="https://open.spotify.com/artist/1YwYUUMmPWIDTJmYSy4xfY" target="_blank"><i class="fab fa-spotify"></i></a>
+                </li>
+                <li class="nav-item m-3">
+                    <a href="https://www.instagram.com/virgil_metal/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="nav-item m-3">
+                    <a href="mailto:virgilband@hotmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="info">
+        <p>Powered by <a href="https://www.linkedin.com/in/maxence-vast-3b5509b2/" target="_blank">Maxence Vast</a></p>
+        <p>content Copyright VIRGIL 2019</p>
+    </div>
+</footer>
+{% block javascripts %}
+{% endblock %}
+</body>
+</html>

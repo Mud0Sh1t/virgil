@@ -1,0 +1,111 @@
+easy_admin:
+  site_name: 'BackOffice Virgil WebSite'
+  # design du BO Virgil WebSite
+  design:
+    brand_color: 'red'
+  list:
+    max_results: 30
+  # change the following to the namespaces of your own entities
+  entities:
+    ShowEntity:
+      class: App\Entity\Show
+      label: 'Concert'
+      list:
+        title: 'Liste des concerts'
+        fields:
+          - { property: 'name', label: 'Nom' }
+          - { property: 'concertHall', label: 'Salle' }
+          - { property: 'date', label: 'Date' }
+          - { property: 'city', label: 'Ville'}
+      new:
+        title: 'Ajouter une date de concert'
+      edit:
+        title: 'Editer une date de concert'
+      form:
+        fields:
+          - { property: 'name', label: 'Nom :' }
+          - { property: 'concertHall', label: 'Salle de concert :' }
+          - { property: 'date', label: 'Date :' }
+          - { property: 'info', label: 'information sur le concert :' ,type: 'fos_ckeditor' }
+          - { property: 'name', label: 'Nom :' }
+          - { property: 'adress', label: 'Adresse :' }
+          - { property: 'city', label: 'Ville :'}
+          - { property: 'region', label: 'Région :' }
+          - { property: 'country', label: 'Pays :' }
+          - { property: 'bookingLink', label: 'Lien de réservation :' }
+    NewsEntiy:
+      class: App\Entity\News
+      label: 'News'
+      list:
+        title: 'Liste des news'
+        fields:
+          - { property: 'name', label: 'Nom' }
+          - { property: 'createAt', label: 'Cree le' }
+      new:
+        title: 'Ajouter une news'
+      edit:
+        title: 'Editer une news'
+      form:
+        fields:
+          - { property: 'name', label: 'Nom :' }
+          - { property: 'description', label: 'Description :' ,type: 'fos_ckeditor' }
+    Media:
+      class: App\Entity\Media
+      label: 'Média'
+      new:
+        title:  'Ajouter une image'
+      edit:
+        title:  'Editer une image'
+      list:
+        title:  'Liste des médias'
+        fields:
+          - { property: 'name', label: 'Nom :' }
+          - { property: 'images', template: 'easy_admin/_field_media_images.html.twig'}
+        show:
+          - { property: 'images', type: 'collection', base_path: '%env(APP_PATH_MEDIA)%' }
+      form:
+        fields:
+          - { property: 'name', label: 'Nom :' }
+          - { property: 'images', label: 'Image :', type: 'collection', type_options: { entry_type : 'App\Form\Type\ImageType' , block_name: 'groups', allow_add: true, allow_delete: true, by_reference: false}  }
+    Merch:
+      class: App\Entity\Merchandising
+      label: 'Merch'
+      new:
+        title:  'Ajouter une annonce'
+      edit:
+        title:  'Editer une annonce'
+      list:
+        title:  'Liste des annonces du merch'
+        fields:
+          - { property: 'name', label: 'Nom' }
+          - { property: 'image', type: 'image', base_path: '%env(APP_PATH_MERCH)%'}
+        show:
+          - { property: 'image', type: 'image', base_path: '%env(APP_PATH_MERCH)%' }
+      form:
+        fields:
+          - { property: 'name', label: 'Nom :' }
+          - { property: 'description', label: 'Description :' }
+          - { property: 'urlMerch', label: "Lien d'achat :" }
+          - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
+    Sponsor:
+      class: App\Entity\Sponsors
+      label: 'Sponsor'
+      new:
+        title: 'Ajouter un sponsor'
+      edit:
+        title: 'Editer un sponsor'
+      list:
+        title: 'Liste des sponsors'
+        fields:
+          - { property: 'name', label: 'Nom :' }
+          - { property: 'information', label: 'Information :' }
+          - { property: 'urlSponsor', label: 'Url :' }
+          - { property: 'image', label: 'Logo :', type: 'image', base_path: '%env(APP_PATH_SPONSORS)%' }
+        show:
+          - { property: 'image', type: 'image', base_path: '%env(APP_PATH_SPONSORS)%' }
+      form:
+        fields:
+          - { property: 'name', label: 'Nom :' }
+          - { property: 'information', label: 'Information :' }
+          - { property: 'urlSponsor', label: 'Lien du sponsor :' }
+          - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
