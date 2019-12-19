@@ -4,12 +4,12 @@ Virgil band WebSite
 This is the source code of the future website of the French metal band [**Virgil**][16], located in the north of France.
 
 The programming language is :
-   * PHP >= 5.5.9
-        * Framework : Symfony v3.4.*
+   * PHP : 7.1.25
+        * Framework : [**Symfony v4.4**][1]
    * HTML 5
    * CSS 3
-        * Framework : Bootstrap v4.3.1
-   * Javascript (without Jquery)
+        * Framework : [**Bootstrap v4.4.1**][21]
+   * Javascript (no Jquery)
 
 
 What's inside?
@@ -29,7 +29,7 @@ The Symfony Standard Edition is configured with the following defaults:
 
 It comes pre-configured with the following bundles:
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+  * [**FrameworkBundle**][22] - The core Symfony framework bundle
 
   * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
     template and routing annotation capability
@@ -46,7 +46,7 @@ It comes pre-configured with the following bundles:
 
   * [**MonologBundle**][11] - Adds support for Monolog, a logging library
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
+  * [**WebProfilerBundle**][20] (in dev/test env) - Adds profiling functionality and
     the web debug toolbar
 
   * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
@@ -58,7 +58,7 @@ It comes pre-configured with the following bundles:
   * [**WebServerBundle**][14] (in dev env) - Adds commands for running applications
     using the PHP built-in web server
 
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
+  * [**DebugBundle**][23] (in dev/test env) - Adds Debug and VarDumper component
     integration
     
 The bundles added :
@@ -72,13 +72,13 @@ released under the MIT or BSD license.
 
 Enjoy!
 
-[1]:  https://symfony.com/doc/3.4/setup.html
+[1]:  https://symfony.com/doc/4.4/setup.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.4/doctrine.html
-[8]:  https://symfony.com/doc/3.4/templating.html
-[9]:  https://symfony.com/doc/3.4/security.html
-[10]: https://symfony.com/doc/3.4/email.html
-[11]: https://symfony.com/doc/3.4/logging.html
+[7]:  https://symfony.com/doc/4.4/doctrine.html
+[8]:  https://symfony.com/doc/4.4/templating.html
+[9]:  https://symfony.com/doc/4.4/security.html
+[10]: https://symfony.com/doc/4.4/email.html
+[11]: https://symfony.com/doc/4.4/logging.html
 [13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
 [14]: https://symfony.com/doc/current/setup/built_in_web_server.html
 [15]: https://symfony.com/doc/current/setup.html
@@ -86,3 +86,7 @@ Enjoy!
 [17]: https://symfony.com/doc/master/bundles/EasyAdminBundle/index.html
 [18]: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html
 [19]: https://symfony.com/doc/master/bundles/EasyAdminBundle/integration/vichuploaderbundle.html
+[20]: https://symfony.com/doc/4.4/reference/configuration/web_profiler.html
+[21]: https://getbootstrap.com/
+[22]: https://symfony.com/doc/4.4/reference/configuration/framework.html
+[23]: https://symfony.com/doc/4.4/reference/configuration/debug.html
