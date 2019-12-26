@@ -12,7 +12,7 @@ use Twig\Environment;
 /**
  * Class ViewAllShowsController
  * @package App\Controller\ShowsController
- * @Route("/shows", name="shows")
+ * @Route("/shows", methods={"GET"}, name="shows")
  */
 class ViewAllShowsController
 {

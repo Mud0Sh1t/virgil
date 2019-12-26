@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col mt-5 mb-5 container-show">
                 <h3>{{ show.name }}</h3>
-                <p>Le : {{ show.date|date("m/d/Y") }}, à {{ show.date|date("H:i") }}</p>
+                <p>Le : {{ show.date|date("m/d/Y") }} à {{ show.date|date("H:i") }}</p>
                 <p>Lieu : {{ show.concertHall }}</p>
                 {% if show.adress is defined and show.adress is not null %}
                     <p>Adresse : {{ show.adress }}</p>
@@ -25,7 +25,7 @@
                     {{ show.info|raw }}
                 {% endif %}
                 {% if show.bookingLink is defined and show.bookingLink is not null %}
-                    <p>Réserve ta place <a href="{{ show.bookingLink }}" target="_blank">ici</a></p>
+                    <p>Réserver votre place <a href="{{ show.bookingLink }}" target="_blank">ici</a></p>
                 {% endif %}
             </div>
         </div>

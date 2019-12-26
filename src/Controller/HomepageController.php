@@ -9,7 +9,7 @@ use Twig\Environment;
 /**
  * Class HomepageController
  * @package App\Controller
- * @Route("/", name="homepage")
+ * @Route(path="/", methods={"GET"}, name="homepage")
  */
 class HomepageController
 {

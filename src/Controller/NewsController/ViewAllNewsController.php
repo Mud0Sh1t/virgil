@@ -10,7 +10,7 @@ use Twig\Environment;
 /**
  * Class ViewAllNewsController
  * @package App\Controller\NewsController
- * @Route("/news", name="news")
+ * @Route("/news", methods={"GET"}, name="news")
  */
 class ViewAllNewsController
 {

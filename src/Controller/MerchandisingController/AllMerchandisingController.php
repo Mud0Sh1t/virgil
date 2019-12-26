@@ -11,7 +11,7 @@ use Twig\Environment;
 /**
  * Class AllMerchandisingController
  * @package App\Controller\MerchandisingController
- * @Route("/merchandising", name="merchandising")
+ * @Route("/merchandising", methods={"GET"}, name="merchandising")
  */
 class AllMerchandisingController
 {

@@ -1,7 +1,6 @@
 /.web-server-pid
 /app/config/parameters.yml
 /build/
-/phpunit.xml
 /var/*
 !/var/cache
 /var/cache/*
@@ -9,19 +8,15 @@
 !/var/logs
 /var/logs/*
 !var/logs/.gitkeep
-!/var/sessions
+/var/sessions
 /var/sessions/*
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
-/vendor/
-/web/bundles/
 .idea
-!/web/assets/img/upload/
-/web/assets/img/upload/*
-!/web/assets/img/merchandising/
-/web/assets/img/merchandising/*
-!/web/assets/img/sponsor/
-/web/assets/img/sponsor/*
+/public/assets/img/upload/*
+/public/assets/img/merchandising/*
+/public/assets/img/sponsor/*
+/public/assets/styles/.sass-cache/
 ###> symfony/phpunit-bridge ###
 .phpunit
 .phpunit.result.cache

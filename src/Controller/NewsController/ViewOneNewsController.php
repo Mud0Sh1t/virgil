@@ -12,7 +12,7 @@ use Twig\Environment;
 /**
  * Class ViewOneNewsController
  * @package App\Controller\NewsController
- * @Route("/news/{id}", name="new")
+ * @Route("/news/{id}", methods={"GET"}, name="new")
  */
 class ViewOneNewsController
 {

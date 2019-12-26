@@ -11,7 +11,7 @@ use Twig\Environment;
 /**
  * Class ViewOneShowController
  * @package App\Controller\ShowsController
- * @Route("/show/{id}", name="show")
+ * @Route("/show/{id}", methods={"GET"}, name="show")
  */
 class ViewOneShowController
 {

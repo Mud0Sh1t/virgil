@@ -16,7 +16,7 @@ use Twig\Environment;
 /**
  * Class AddAdminController
  * @package App\Controller\AdminController
- * @Route("/addAdmin", name="addAdmin")
+ * @Route("/addAdmin", methods={"GET", "POST"}, name="addAdmin")
  */
 class AddAdminController extends AbstractController
 {
@@ -37,11 +37,8 @@ class AddAdminController extends AbstractController
 			return $this->redirectToRoute('login');
 		}
 
-
 		return new Response($twig->render('Security/addAdmin.html.twig',
-			[
-				'form' => $form->createView()
-			]
+			['form' => $form->createView()]
 		));
 	}
 }

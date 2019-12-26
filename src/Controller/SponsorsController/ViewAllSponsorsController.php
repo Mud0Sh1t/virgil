@@ -10,7 +10,7 @@ use Twig\Environment;
 /**
  * Class ViewAllSponsorsController
  * @package App\Controller\SponsorsController
- * @Route("/contact", name="contact")
+ * @Route("/contact", methods={"GET"}, name="contact")
  */
 class ViewAllSponsorsController
 {

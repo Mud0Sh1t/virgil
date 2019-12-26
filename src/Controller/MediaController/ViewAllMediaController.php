@@ -10,7 +10,7 @@ use Twig\Environment;
 /**
  * Class ViewAllMediaController
  * @package App\Controller\MediaController
- * @Route("/media", name="media")
+ * @Route("/media", methods={"GET"}, name="media")
  */
 class ViewAllMediaController
 {

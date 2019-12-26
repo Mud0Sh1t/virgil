@@ -7,11 +7,16 @@ easy_admin:
     max_results: 30
   # change the following to the namespaces of your own entities
   entities:
-    ShowEntity:
+    Concert:
       class: App\Entity\Show
       label: 'Concert'
       list:
         title: 'Liste des concerts'
+        actions:
+          - { name: 'search', label: 'Recherche' }
+          - { name: 'new', label: 'Ajouter un concert'}
+          - { name: 'edit', label: 'Modifier'}
+          - { name: 'delete', label: 'Supprimer' }
         fields:
           - { property: 'name', label: 'Nom' }
           - { property: 'concertHall', label: 'Salle' }
@@ -33,11 +38,16 @@ easy_admin:
           - { property: 'region', label: 'Région :' }
           - { property: 'country', label: 'Pays :' }
           - { property: 'bookingLink', label: 'Lien de réservation :' }
-    NewsEntiy:
+    News:
       class: App\Entity\News
       label: 'News'
       list:
         title: 'Liste des news'
+        actions:
+          - { name: 'search', label: 'Recherche' }
+          - { name: 'new', label: 'Ajouter une news'}
+          - { name: 'edit', label: 'Modifier'}
+          - { name: 'delete', label: 'Supprimer' }
         fields:
           - { property: 'name', label: 'Nom' }
           - { property: 'createAt', label: 'Cree le' }
@@ -58,6 +68,11 @@ easy_admin:
         title:  'Editer une image'
       list:
         title:  'Liste des médias'
+        actions:
+          - { name: 'search', label: 'Recherche' }
+          - { name: 'new', label: 'Ajouter un média'}
+          - { name: 'edit', label: 'Modifier'}
+          - { name: 'delete', label: 'Supprimer' }
         fields:
           - { property: 'name', label: 'Nom :' }
           - { property: 'images', template: 'easy_admin/_field_media_images.html.twig'}
@@ -76,6 +91,11 @@ easy_admin:
         title:  'Editer une annonce'
       list:
         title:  'Liste des annonces du merch'
+        actions:
+          - { name: 'search', label: 'Recherche' }
+          - { name: 'new', label: 'Ajouter du merch'}
+          - { name: 'edit', label: 'Modifier'}
+          - { name: 'delete', label: 'Supprimer' }
         fields:
           - { property: 'name', label: 'Nom' }
           - { property: 'image', type: 'image', base_path: '%env(APP_PATH_MERCH)%'}
@@ -96,6 +116,11 @@ easy_admin:
         title: 'Editer un sponsor'
       list:
         title: 'Liste des sponsors'
+        actions:
+          - { name: 'search', label: 'Recherche' }
+          - { name: 'new', label: 'Ajouter un sponsor'}
+          - { name: 'edit', label: 'Modifier'}
+          - { name: 'delete', label: 'Supprimer' }
         fields:
           - { property: 'name', label: 'Nom :' }
           - { property: 'information', label: 'Information :' }

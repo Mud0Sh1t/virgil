@@ -9,7 +9,7 @@ use Twig\Environment;
 /**
  * Class BioController
  * @package App\Controller\BioController
- * @Route("/bio", name="biographie")
+ * @Route("/bio", methods={"GET"}, name="biographie")
  */
 class BioController
 {
