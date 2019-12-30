@@ -14,6 +14,6 @@ class logoutAdminController
 {
 	public function __invoke()
 	{
-		throw new \Exception('Logout success');
+		return new \Exception('Logout success');
 	}
 }

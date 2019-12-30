@@ -16,7 +16,7 @@ class HomepageControllerTest extends WebTestCase
 		echo "\r\nHomePage OK";
 	}
 
-	public function testHomepageToBio()
+	/*public function testHomepageToBio()
 	{
 		$client = static::createClient();
 		$crawler = $client->request("GET", "/");
@@ -25,5 +25,5 @@ class HomepageControllerTest extends WebTestCase
 		$client->click($bioLink);
 		$this->assertEquals(Response::HTTP_OK, $client->getResponse()->getStatusCode());
 		echo "\r\nHomepage to Biographie OK";
-	}
+	}*/
 }

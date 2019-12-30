@@ -35,31 +35,6 @@ class AddAdminControllerTest extends WebTestCase
 		echo "\nAdd AdminTest OK";
 	}
 
-	public function testLoginLogoutAdmin()
-	{
-		$client = static::createClient();
-		$crawler = $client->request("GET", "/admin");
-
-		$form = $crawler->selectButton("login")->form();
-		$form['username'] = "AdminTestUnity";
-		$form['password'] = "azerty";
-		$client->submit($form);
-
-		$crawler = $client->followRedirect();
-
-		$this->assertEquals(Response::HTTP_FOUND, $client->getResponse()->getStatusCode());
-
-		echo "\nLogin Admin Test OK";
-
-		$crawler = $client->request("GET", "/logout");
-
-		$crawler = $client->followRedirect();
-
-		$this->assertEquals(Response::HTTP_OK, $client->getResponse()->getStatusCode());
-
-		echo "\nLogout Admin Test OK";
-	}
-
 	public function testAddShowBo()
 	{
 		$client = static::createClient();

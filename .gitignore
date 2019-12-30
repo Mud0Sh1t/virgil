@@ -13,10 +13,11 @@
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 .idea
-/public/assets/img/upload/*
-/public/assets/img/merchandising/*
-/public/assets/img/sponsor/*
+/public/assets/img/upload
+/public/assets/img/merchandising
+/public/assets/img/sponsor
 /public/assets/styles/.sass-cache/
+/public/test-unity
 ###> symfony/phpunit-bridge ###
 .phpunit
 .phpunit.result.cache
