@@ -82,31 +82,6 @@ easy_admin:
         fields:
           - { property: 'name', label: 'Nom :' }
           - { property: 'images', label: 'Image :', type: 'collection', type_options: { entry_type : 'App\Form\Type\ImageType' , block_name: 'groups', allow_add: true, allow_delete: true, by_reference: false}  }
-    Merch:
-      class: App\Entity\Merchandising
-      label: 'Merch'
-      new:
-        title:  'Ajouter une annonce'
-      edit:
-        title:  'Editer une annonce'
-      list:
-        title:  'Liste des annonces du merch'
-        actions:
-          - { name: 'search', label: 'Recherche' }
-          - { name: 'new', label: 'Ajouter du merch'}
-          - { name: 'edit', label: 'Modifier'}
-          - { name: 'delete', label: 'Supprimer' }
-        fields:
-          - { property: 'name', label: 'Nom' }
-          - { property: 'image', type: 'image', base_path: '%env(APP_PATH_MERCH)%'}
-        show:
-          - { property: 'image', type: 'image', base_path: '%env(APP_PATH_MERCH)%' }
-      form:
-        fields:
-          - { property: 'name', label: 'Nom :' }
-          - { property: 'description', label: 'Description :' }
-          - { property: 'urlMerch', label: "Lien d'achat :" }
-          - { property: 'imageFile', label: 'Image :', type: 'vich_image' }
     Sponsor:
       class: App\Entity\Sponsors
       label: 'Sponsor'
