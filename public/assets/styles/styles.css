@@ -15,7 +15,23 @@ body {
   body h3 {
     color: #ffffff !important; }
   body nav .nav .nav-item a {
-    color: #ffffff !important; }
+    font-family: 'Della Respira', serif;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 1.3em; }
+  body #homepage {
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 112%; }
+    body #homepage #container-video {
+      position: absolute;
+      width: 100%;
+      top: 135%; }
+      @media screen and (max-width: 1300px) {
+        body #homepage #container-video {
+          top: 85%; } }
   body section {
     width: 100%; }
     body section article p {
@@ -40,12 +56,12 @@ body {
         color: #ffffff !important;
         text-decoration: underline; }
   body footer #social-network ul li {
-    color: #878787 !important; }
+    /*a:hover{
+      box-shadow:10px 5px 5px #ffffff;
+    }*/ }
     body footer #social-network ul li a {
-      color: #878787 !important;
+      color: #ffffff !important;
       font-size: 2em; }
-    body footer #social-network ul li a:hover {
-      color: #ffffff !important; }
   body footer #info {
     width: 65%;
     text-align: center;

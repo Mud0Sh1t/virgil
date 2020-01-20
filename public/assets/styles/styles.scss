@@ -23,11 +23,29 @@ body{
     .nav{
       .nav-item{
         a{
+          font-family: 'Della Respira', serif;
           color:#ffffff !important;
+          font-weight: 600;
+          font-size: 1.3em;
         }
         a:hover{
 
         }
+      }
+    }
+  }
+  #homepage{
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 112%;
+    #container-video{
+      position: absolute;
+      width: 100%;
+      top:135%;
+      @media screen and (max-width: 1300px) {
+        top:85%;
       }
     }
   }
@@ -78,14 +96,13 @@ body{
     #social-network{
       ul{
         li{
-          color: #878787!important;
           a{
-            color:#878787 !important;
+            color:#ffffff !important;
             font-size: 2em;
           }
-          a:hover{
-            color:#ffffff !important;
-          }
+          /*a:hover{
+            box-shadow:10px 5px 5px #ffffff;
+          }*/
         }
       }
     }
@@ -108,5 +125,3 @@ body{
     }
   }
 }
-
-
