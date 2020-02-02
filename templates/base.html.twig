@@ -4,7 +4,7 @@
     <meta name="author" content="Maxence Vast">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Virgil - Official WebSite{% endblock %}</title>
+    <title>{% block title %} - Virgil Official WebSite{% endblock %}</title>
     <meta name="description" content="The official website of Virgil, Deathcore/Black/Melodic Death, Metal band from north of France..">
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('assets/styles/styles.css') }}">
@@ -32,8 +32,8 @@
             <li class="nav-item mr-3"><a href="{{ path('homepage') }}">Home</a></li>
             <li class="nav-item ml-3 mr-3"><a href="{{ path('news') }}">News</a></li>
             <li class="nav-item ml-3 mr-3"><a href="{{ path('biographie') }}">Bio</a></li>
-            <li class="nav-item ml-3 mr-3"><a href="{{ path('shows') }}">Concerts</a></li>
-            <li class="nav-item ml-3 mr-3"><a href="{{ path('media') }}">Médias</a></li>
+            <li class="nav-item ml-3 mr-3"><a href="{{ path('shows') }}">Shows</a></li>
+            <li class="nav-item ml-3 mr-3"><a href="{{ path('media') }}">Media</a></li>
             <li class="nav-item ml-3 mr-3">
                 <a href="https://www.wiseband.com/yo/shop.php?boutique=6700&fbclid=IwAR2KVz-MnFeo5Sjzor_704Vi82l35t2AEnXkWRRLHQ4Zu4uGFhipZAHQvqw" target="_blank">Store</a>
             </li>
@@ -71,11 +71,12 @@
         </div>
     </div>
     <div id="info">
-        <p>Powered by <a href="https://www.linkedin.com/in/maxence-vast-3b5509b2/" target="_blank">Maxence Vast</a></p>
+        <p>Powered by <a href="https://www.linkedin.com/in/maxence-vast-3b5509b2/" target="_blank">Maxence&nbsp;Vast</a></p>
         <p>content Copyright VIRGIL 2019</p>
     </div>
 </footer>
 {% block javascripts %}
+    <script src="{{ asset('assets/js/main.js') }}" type="text/javascript"></script>
 {% endblock %}
 </body>
 </html>

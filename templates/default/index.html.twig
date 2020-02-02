@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}Home{{ parent() }}{% endblock %}
 {% block body %}
     <section id="homepage">
         <div id="container-video">
@@ -13,7 +13,6 @@
             </article>
         </div>
     </section>
-
 {% endblock %}
 
 {% block stylesheets %}
