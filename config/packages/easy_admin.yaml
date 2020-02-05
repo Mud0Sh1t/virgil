@@ -59,29 +59,30 @@ easy_admin:
         fields:
           - { property: 'name', label: 'Nom :' }
           - { property: 'description', label: 'Description :' ,type: 'fos_ckeditor' }
-    Media:
-      class: App\Entity\Media
-      label: 'Média'
-      new:
-        title:  'Ajouter une image'
-      edit:
-        title:  'Editer une image'
-      list:
-        title:  'Liste des médias'
-        actions:
-          - { name: 'search', label: 'Recherche' }
-          - { name: 'new', label: 'Ajouter un média'}
-          - { name: 'edit', label: 'Modifier'}
-          - { name: 'delete', label: 'Supprimer' }
-        fields:
-          - { property: 'name', label: 'Nom :' }
-          - { property: 'images', template: 'easy_admin/_field_media_images.html.twig'}
-        show:
-          - { property: 'images', type: 'collection', base_path: '%env(APP_PATH_MEDIA)%' }
-      form:
-        fields:
-          - { property: 'name', label: 'Nom :' }
-          - { property: 'images', label: 'Image :', type: 'collection', type_options: { entry_type : 'App\Form\Type\ImageType' , block_name: 'groups', allow_add: true, allow_delete: true, by_reference: false}  }
+    #Section MEDIA delete
+    #Media:
+    #  class: App\Entity\Media
+    #  label: 'Média'
+    #  new:
+    #    title:  'Ajouter une image'
+    #  edit:
+    #    title:  'Editer une image'
+    #  list:
+    #    title:  'Liste des médias'
+    #    actions:
+    #      - { name: 'search', label: 'Recherche' }
+    #      - { name: 'new', label: 'Ajouter un média'}
+    #      - { name: 'edit', label: 'Modifier'}
+    #      - { name: 'delete', label: 'Supprimer' }
+    #    fields:
+    #      - { property: 'name', label: 'Nom :' }
+    #      - { property: 'images', template: 'easy_admin/_field_media_images.html.twig'}
+    #    show:
+    #      - { property: 'images', type: 'collection', base_path: '%env(APP_PATH_MEDIA)%' }
+    #  form:
+    #    fields:
+    #      - { property: 'name', label: 'Nom :' }
+    #      - { property: 'images', label: 'Image :', type: 'collection', type_options: { entry_type : 'App\Form\Type\ImageType' , block_name: 'groups', allow_add: true, allow_delete: true, by_reference: false}  }
     Sponsor:
       class: App\Entity\Sponsors
       label: 'Sponsor'
