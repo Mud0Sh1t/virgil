@@ -1,0 +1,98 @@
+#homepage {
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 112%; }
+  @media screen and (min-width: 1840px) {
+    #homepage {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding-bottom: 95%; } }
+  @media screen and (max-width: 1840px) {
+    #homepage {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding-bottom: 98%; } }
+  @media screen and (max-width: 1780px) {
+    #homepage {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding-bottom: 102%; } }
+  @media screen and (max-width: 1720px) {
+    #homepage {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding-bottom: 106%; } }
+  @media screen and (max-width: 1650px) {
+    #homepage {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding-bottom: 110%; } }
+  @media screen and (max-width: 1600px) {
+    #homepage {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding-bottom: 110%; } }
+  #homepage #container-video {
+    position: absolute;
+    width: 84%;
+    top: 110%; }
+    @media screen and (max-width: 1880px) {
+      #homepage #container-video {
+        width: 85%; } }
+    @media screen and (max-width: 1780px) {
+      #homepage #container-video {
+        width: 90%; } }
+    @media screen and (max-width: 1730px) {
+      #homepage #container-video {
+        width: 93%; } }
+    @media screen and (max-width: 1730px) {
+      #homepage #container-video {
+        width: 96%; } }
+    @media screen and (max-width: 1600px) {
+      #homepage #container-video {
+        width: 100%; } }
+    @media screen and (max-width: 1400px) {
+      #homepage #container-video {
+        top: 100%; } }
+    @media screen and (max-width: 1350px) {
+      #homepage #container-video {
+        top: 90%; } }
+    @media screen and (max-width: 1300px) {
+      #homepage #container-video {
+        top: 85%; } }
+    @media screen and (max-width: 1220px) {
+      #homepage #container-video {
+        top: 80%; } }
+    @media screen and (max-width: 1080px) {
+      #homepage #container-video {
+        top: 75%; } }
+    @media screen and (max-width: 1040px) {
+      #homepage #container-video {
+        top: 70%; } }
+    @media screen and (max-width: 1000px) {
+      #homepage #container-video {
+        top: 65%; } }
+    @media screen and (max-width: 840px) {
+      #homepage #container-video {
+        top: 60%; } }
+    @media screen and (max-width: 800px) {
+      #homepage #container-video {
+        top: 55%; } }
+    @media screen and (max-width: 640px) {
+      #homepage #container-video {
+        top: 50%; } }
+    @media screen and (max-width: 600px) {
+      #homepage #container-video {
+        top: 47%; } }
+    @media screen and (max-width: 600px) {
+      #homepage #container-video {
+        top: 47%; } }
+    @media screen and (max-width: 575px) {
+      #homepage #container-video {
+        top: 43%;
+        width: 80%;
+        left: 10%; } }
+
+/*# sourceMappingURL=homepage.css.map */
