@@ -1,8 +1,15 @@
 {% extends 'base.html.twig' %}
-
+{% block title %}Bio{{ parent() }}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('assets/styles/bio.css') }}">
+{% endblock %}
 {% block body %}
 <section>
     <article class="container">
+        <div id="biographie" class="mt-3">
+            <img src="{{ asset("assets/img/header-page-bio.jpg") }}" class="img-fluid" alt="" />
+        </div>
         <div class="row">
             <div class="col text-left mt-5 mb-5">
             <p class="text-white">
@@ -17,9 +24,9 @@
                 <br/><br/>
                 Charles : Basse<br/>
                 Julien : Guitare<br/>
-                Thomas : Guitare<br/>
+                Marius : Vocal<br/>
                 David : Batterie<br/>
-                Marius : Vocal
+                Thomas : Guitare<br/>
             </p>
             </div>
         </div>
@@ -27,6 +34,3 @@
 </section>
 {% endblock %}
 
-{% block stylesheets %}
-    {{ parent() }}
-{% endblock %}
