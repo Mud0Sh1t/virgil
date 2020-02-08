@@ -16,6 +16,7 @@
                 <p class="text-white">Contactez nous à cette adresse : <a class="text-white text-lowercase" href="mailto:virgilband@hotmail.com" target="_blank">virgilband@hotmail.com</a></p>
             </div>
         </div>
+        {% if sponsors|length > 0 %}
         <div class="row">
             <div class="col-md-12">
                 <h3 class="mt-5 mb-5">Nos sponsors :</h3>
@@ -29,6 +30,7 @@
             </div>
             {% endfor %}
         </div>
+        {% endif %}
     </article>
 </section>
 {% endblock %}

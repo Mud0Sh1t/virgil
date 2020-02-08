@@ -8,32 +8,34 @@
             </div>
         </article>
         <article class="container">
-                <h1>Nos concerts</h1>
+            {% if shows|length > 0 %}
+                <h1>Our shows</h1>
                 <div class="row">
                     <div class="col-6 justify-content-center">
                         {% for show in shows %}
                             <div class="row">
                                 <div class="col shows-container mt-5">
                                     <h3><a href="{{ path('show', { 'id': show.id }) }}">{{ show.name }}</a></h3>
-                                    <p>Le : {{ show.date|date("m/d/Y") }}, à {{ show.date|date("H:i") }}</p>
-                                    <p>Lieu : {{ show.concertHall }}</p>
+                                    <p>On : {{ show.date|date("d M Y") }}, at {{ show.date|date("h:i a") }}</p>
+                                    <p>Place : {{ show.concertHall }}</p>
                                     {% if show.adress is defined and show.adress is not null %}
-                                        <p>Adresse : {{ show.adress }}</p>
+                                        <p>Adress : {{ show.adress }}</p>
                                     {% endif %}
                                     {% if show.city is defined and show.city is not null %}
-                                        <p>Ville : {{ show.city }}</p>
+                                        <p>City : {{ show.city }}</p>
                                     {% endif %}
                                     {% if show.region is defined and show.region is not null %}
-                                        <p>Région : {{ show.region }}</p>
+                                        <p>Region : {{ show.region }}</p>
                                     {% endif %}
                                     {% if show.country is defined and show.country is not null  %}
-                                        <p>Pays : {{ show.country }}</p>
+                                        <p>Country : {{ show.country }}</p>
                                     {% endif %}
                                 </div>
                             </div>
                         {% endfor %}
                     </div>
                 </div>
+            {% endif %}
         </article>
     </section>
 
