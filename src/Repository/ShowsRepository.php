@@ -22,18 +22,43 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class ShowsRepository extends ServiceEntityRepository
 {
-	public function __construct(ManagerRegistry $registry )
+    private $dateNow;
+
+	public function __construct(ManagerRegistry $registry)
 	{
 		parent::__construct($registry, Show::class);
+		$this->dateNow = new \DateTime('now');
 	}
 
-	public function findByMostRecent()
+    public function findByMostRecent()
     {
         $qb = $this->_em->createQueryBuilder();
 
         return $qb->select('s')
             ->from(Show::class, 's')
             ->orderBy('s.date', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findByShowPast(){
+        $qb = $this->_em->createQueryBuilder();
+
+        return $qb->select('s')
+            ->from(Show::class, 's')
+            ->where('s.date < :now')
+            ->setParameter('now', $this->dateNow)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findByShowFuture(){
+        $qb = $this->_em->createQueryBuilder();
+
+        return $qb->select('s')
+            ->from(Show::class, 's')
+            ->where('s.date >= :now')
+            ->setParameter('now', $this->dateNow)
             ->getQuery()
             ->getResult();
     }

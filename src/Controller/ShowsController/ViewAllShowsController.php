@@ -20,8 +20,16 @@ class ViewAllShowsController
 	{
 		$shows = $showsRepository->findByMostRecent();
 
+		$showsPast = $showsRepository->findByShowPast();
+
+		$showsFuture = $showsRepository->findByShowFuture();
+
 		return new Response($twig->render('default/show/shows.html.twig',
-			['shows' => $shows]
+			[
+			    'shows'         => $shows,
+                'showsPast'     => $showsPast,
+                'showsFuture'   => $showsFuture
+            ]
 		));
 	}
 }

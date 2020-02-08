@@ -38,27 +38,27 @@ easy_admin:
           - { property: 'region', label: 'Région :' }
           - { property: 'country', label: 'Pays :' }
           - { property: 'bookingLink', label: 'Lien de réservation :' }
-    News:
-      class: App\Entity\News
-      label: 'News'
-      list:
-        title: 'Liste des news'
-        actions:
-          - { name: 'search', label: 'Recherche' }
-          - { name: 'new', label: 'Ajouter une news'}
-          - { name: 'edit', label: 'Modifier'}
-          - { name: 'delete', label: 'Supprimer' }
-        fields:
-          - { property: 'name', label: 'Nom' }
-          - { property: 'createAt', label: 'Cree le' }
-      new:
-        title: 'Ajouter une news'
-      edit:
-        title: 'Editer une news'
-      form:
-        fields:
-          - { property: 'name', label: 'Nom :' }
-          - { property: 'description', label: 'Description :' ,type: 'fos_ckeditor' }
+    #News:
+    #  class: App\Entity\News
+    #  label: 'News'
+    #  list:
+    #    title: 'Liste des news'
+    #    actions:
+    #      - { name: 'search', label: 'Recherche' }
+    #      - { name: 'new', label: 'Ajouter une news'}
+    #      - { name: 'edit', label: 'Modifier'}
+    #      - { name: 'delete', label: 'Supprimer' }
+    #    fields:
+    #      - { property: 'name', label: 'Nom' }
+    #      - { property: 'createAt', label: 'Cree le' }
+    #  new:
+    #    title: 'Ajouter une news'
+    #  edit:
+    #    title: 'Editer une news'
+    #  form:
+    #    fields:
+    #      - { property: 'name', label: 'Nom :' }
+    #      - { property: 'description', label: 'Description :' ,type: 'fos_ckeditor' }
     #Section MEDIA delete
     #Media:
     #  class: App\Entity\Media

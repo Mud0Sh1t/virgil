@@ -1,5 +1,5 @@
 #homepage {
-  background-image: url("../img/header.jpg");
+  background-image: url("../img/header2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
     #homepage {
       max-width: 1600px;
       margin: 0 auto;
-      padding-bottom: 95%; } }
+      padding-bottom: 88%; } }
   @media screen and (max-width: 1840px) {
     #homepage {
       max-width: 1600px;
@@ -37,7 +37,7 @@
   #homepage #container-video {
     position: absolute;
     width: 84%;
-    top: 110%; }
+    top: 95%; }
     @media screen and (max-width: 1880px) {
       #homepage #container-video {
         width: 85%; } }

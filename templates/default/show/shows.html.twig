@@ -8,28 +8,56 @@
             </div>
         </article>
         <article class="container">
-            {% if shows|length > 0 %}
-                <h1>Our shows</h1>
+            {% if showsFuture|length > 0 %}
+                <h1>Our future shows</h1>
+                <div class="row mb-5">
+                    <div class="col ">
+                        <div class="row justify-content-center ">
+                        {% for showFuture in showsFuture %}
+                                <div class="col-md-4 shows-container mt-5">
+                                    <h3><a href="{{ path('show', { 'id': showFuture.id }) }}">{{ showFuture.name }}</a></h3>
+                                    <p>On : {{ showFuture.date|date("d M Y") }}, at {{ showFuture.date|date("h:i a") }}</p>
+                                    <p>Place : {{ showFuture.concertHall }}</p>
+                                    {% if showFuture.adress is defined and showFuture.adress is not null %}
+                                        <p>Adress : {{ showFuture.adress }}
+                                    {% endif %}
+                                    {% if showFuture.city is defined and showFuture.city is not null %}
+                                        - {{ showFuture.city }}</p>
+                                    {% endif %}
+                                    {% if showFuture.region is defined and showFuture.region is not null %}
+                                        <p>Region : {{ showFuture.region }}</p>
+                                    {% endif %}
+                                    {% if showFuture.country is defined and showFuture.country is not null  %}
+                                        <p>Country : {{ showFuture.country }}</p>
+                                    {% endif %}
+                                </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            {% if showsPast|length > 0 %}
+                <h1>Our past shows</h1>
                 <div class="row">
-                    <div class="col-6 justify-content-center">
-                        {% for show in shows %}
+                    <div class="col justify-content-center">
+                        {% for showPast in showsPast %}
                             <div class="row">
                                 <div class="col shows-container mt-5">
-                                    <h3><a href="{{ path('show', { 'id': show.id }) }}">{{ show.name }}</a></h3>
-                                    <p>On : {{ show.date|date("d M Y") }}, at {{ show.date|date("h:i a") }}</p>
-                                    <p>Place : {{ show.concertHall }}</p>
-                                    {% if show.adress is defined and show.adress is not null %}
-                                        <p>Adress : {{ show.adress }}</p>
+                                    <h3>{{ showPast.name }}</h3>
+                                    <p>{{ showPast.date|date("d M Y") }} - {{ showPast.concertHall }}
+                                    {% if showPast.adress is defined and showPast.adress is not null %}
+                                        - {{ showPast.adress }}
                                     {% endif %}
-                                    {% if show.city is defined and show.city is not null %}
-                                        <p>City : {{ show.city }}</p>
+                                    {% if showPast.city is defined and showPast.city is not null %}
+                                         {{ showPast.city }}
                                     {% endif %}
-                                    {% if show.region is defined and show.region is not null %}
-                                        <p>Region : {{ show.region }}</p>
+                                    {% if showPast.region is defined and showPast.region is not null %}
+                                        - {{ showPast.region }}
                                     {% endif %}
-                                    {% if show.country is defined and show.country is not null  %}
-                                        <p>Country : {{ show.country }}</p>
+                                    {% if showPast.country is defined and showPast.country is not null  %}
+                                        - {{ showPast.country }}
                                     {% endif %}
+                                    </p>
                                 </div>
                             </div>
                         {% endfor %}
